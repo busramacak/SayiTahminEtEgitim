@@ -19,16 +19,16 @@ class SonucEkrani : AppCompatActivity() {
 
 
 
-//        val sonuc:String= Intent().getStringExtra("sonuc").toString()
-//
-//
-//        if(sonuc=="d"){
-//            binding.imageView.setImageResource(R.drawable.smile)
-//            binding.kazandinizTxt.text="KAZANDINIZ"
-//        }else if(sonuc=="y"){
-//            binding.imageView.setImageResource(R.drawable.agla)
-//            binding.kazandinizTxt.text="KAYBETTİNİZ"
-//        }
+        val sonuc = intent.getBooleanExtra("sonuc",true)
+
+
+        if(sonuc==true){
+            binding.imageView.setImageResource(R.drawable.smile)
+            binding.kazandinizTxt.text="KAZANDINIZ"
+        }else if(sonuc==false){
+            binding.imageView.setImageResource(R.drawable.agla)
+            binding.kazandinizTxt.text="KAYBETTİNİZ"
+        }
 
     }
 
